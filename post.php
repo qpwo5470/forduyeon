@@ -8,7 +8,10 @@ $conn = mysqli_connect(
     'endus',
     'test');
 
+$id = $data["id"];
+$name = $data["name"];
+$state = $data["state"];
 
-$sql = "INSERT INTO device_state (id, name, state) VALUES ('$data["id"]', '$data["name"]', '$data["state"]')";
+$sql = "INSERT INTO device_state (id, name, state) VALUES ('$state', '$name', '$state')";
 mysqli_query($conn, $sql);
 ?>
