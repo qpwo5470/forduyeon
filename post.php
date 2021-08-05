@@ -9,7 +9,7 @@ $data = json_decode($json_data);
 //    'test');
 //
 echo $json_data;
-echo $data;
+echo $data['id'];
 //$id = $data["id"];
 //$name = $data["name"];
 //$state = $data["state"];
