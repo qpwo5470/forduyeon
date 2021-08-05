@@ -1,8 +1,6 @@
 <?php
-$id = $_POST['id'];
-$name = $_POST['name'];
-$state = $_POST['state'];
-//$data = json_decode($json_data);
+$json_data = $_POST['json'];
+$data = json_decode($json_data, true);
 
 $conn = mysqli_connect(
     'localhost',
@@ -10,8 +8,13 @@ $conn = mysqli_connect(
     'endus',
     'test');
 
+$id = $data["id"];
+$name = $data["name"];
+$state = $data["state"];
+
 $sql = "INSERT INTO device_state(id, name, state) VALUES ('$id', '$name', '$state')";
-mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql);
+echo $result;
 
 mysqli_close($conn);
 ?>
