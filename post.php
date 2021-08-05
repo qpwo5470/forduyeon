@@ -13,5 +13,6 @@ $name = $data["name"];
 $state = $data["state"];
 
 $sql = "INSERT INTO device_state (id, name, state) VALUES ('$state', '$name', '$state')";
-mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql);
+echo $result
 ?>
