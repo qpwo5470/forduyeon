@@ -8,9 +8,11 @@ $data = json_decode($json_data);
 //    'endus',
 //    'test');
 //
-$id = $data["id"];
-$name = $data["name"];
-$state = $data["state"];
+echo $json_data;
+echo $data;
+//$id = $data["id"];
+//$name = $data["name"];
+//$state = $data["state"];
 //
 //$sql = "INSERT INTO device_state(id, name, state) VALUES ('$id', '$name', '$state')";
 //mysqli_query($conn, $sql);
